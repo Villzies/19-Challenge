@@ -26,10 +26,16 @@ warmStrategyCache({
 
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
-//Asset caching
+//Asset caching for javascript and css
 registerRoute(
 
-({ request }) => ["style", "script", "worker"].includes(request.destination),
+({ request }) => {
+  return (
+request.destination === 'style' ||
+request.destination === 'script'
+  );
+
+},
 new StaleWhileRevalidate({
   cacheName: 'asset-cache',
   plugins: [
