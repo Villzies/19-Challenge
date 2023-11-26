@@ -1,7 +1,7 @@
 {
-  "name": "JATE",
+  "name": "breaditor",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple text editor",
   "main": "server.js",
   "scripts": {
     "start:dev": "",
