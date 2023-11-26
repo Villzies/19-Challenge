@@ -4,7 +4,7 @@
   "description": "A simple text editor",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "keywords": [],
   "author": "",
